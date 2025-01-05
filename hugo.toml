@@ -1,0 +1,65 @@
+title = "kasreti's crib"
+description = "welcome to kasreti's crib"
+baseURL = "https://kasreti.github.io"
+
+languageCode = 'en-ca'
+defaultContentLanguage = "en-ca"
+
+theme = "blog"
+defaultColor = "light" 
+enableEmoji = true
+ignoreErrors = ["additional-script-loading-error"]
+mainSections = ['posts']
+
+[params]
+	favicon = true
+	toc = true
+	tocOpen = true
+	goToTop = true
+	
+[[params.socialIcons]]
+	name = "github"
+	url = "https://github.com/kasreti"
+
+[[params.socialIcons]]
+	name = "twitter"
+	url = "https://twitter.com/kasreti"
+
+[params.author]
+		avatar = "author/pfp.png"
+		intro = "kasreti's crib"
+		name = "Kasreti"
+		description = "the unhinged ramblings of the most successful social media influencer of the decade"
+		
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.extensions]
+			[markup.goldmark.extensions.extras]
+				[markup.goldmark.extensions.extras.subscript]
+					enable = true
+			[markup.goldmark.extensions.extras.superscript]
+					enable = true
+		[markup.goldmark.renderer]
+			unsafe = true
+
+contentDir = "content"
+weight = 1
+[menu]
+	[[menu.main]]
+		pageRef="/"
+		name = 'home'
+		url = '/'
+		weight = 10
+	[[menu.main]]
+		pageRef="about"
+		name = 'about'
+		url = '/about/'
+		weight = 20
+	[[menu.main]]
+		pageRef="posts"
+		name = 'all posts'
+		url = '/posts/'
+		weight = 30
+	
+
+
